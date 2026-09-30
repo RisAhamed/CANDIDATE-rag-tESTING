@@ -1,0 +1,24 @@
+Eva Martinez
+Email: eva.martinez@email.com
+Phone: +1-555-345-6789
+
+Summary
+Junior Python developer with 2 years of experience in web development and data analysis. Familiar with Flask, pandas, and basic machine learning concepts. Eager to learn and grow in a collaborative environment.
+
+Skills
+Python, Flask, Pandas, NumPy, SQL, Git, HTML, CSS, JavaScript, Matplotlib, Scikit-learn, Jupyter
+
+Experience
+Junior Python Developer - TechStart (2023 - Present)
+- Assisted in building Flask web applications
+- Performed data analysis using Pandas and NumPy
+- Created visualizations with Matplotlib and Seaborn
+- Participated in code reviews and agile ceremonies
+
+Data Analyst Intern - AnalyticsPro (2022 - 2023)
+- Analyzed datasets using Python and SQL
+- Created reports and dashboards for clients
+- Automated data cleaning processes
+
+Education
+Bachelor of Science in Data Science - University of Washington (2022)

@@ -1,0 +1,24 @@
+David Brown
+Email: david.brown@email.com
+Phone: +1-555-234-5678
+
+Summary
+DevOps engineer with 7 years of experience in cloud infrastructure, CI/CD, and containerization. Expertise in AWS, Kubernetes, and infrastructure as code.
+
+Skills
+AWS, Azure, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, Python, Bash, Linux, Ansible, Helm, Prometheus, Grafana, Git
+
+Experience
+Senior DevOps Engineer - CloudFirst (2020 - Present)
+- Managed Kubernetes clusters across AWS and Azure
+- Implemented infrastructure as code using Terraform
+- Built CI/CD pipelines with Jenkins and GitHub Actions
+- Reduced deployment time by 60% through automation
+
+DevOps Engineer - InfraCorp (2017 - 2020)
+- Administered Linux servers and cloud infrastructure
+- Automated deployment processes with Ansible
+- Monitored systems with Prometheus and Grafana
+
+Education
+Bachelor of Science in Information Technology - Georgia Tech (2017)

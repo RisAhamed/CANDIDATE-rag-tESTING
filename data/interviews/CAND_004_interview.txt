@@ -1,0 +1,71 @@
+[00:00:00]
+INTERVIEWER: Hi Sneha, thanks for coming in. Let's talk about your FastAPI experience. What have you built with it?
+
+[00:00:15]
+CANDIDATE: Thank you. I've been using FastAPI for about a year and a half at CloudNine Technologies. I built REST APIs for our project management SaaS platform. I've created endpoints for user authentication, project CRUD operations, task management, and file uploads.
+
+[00:01:30]
+INTERVIEWER: Can you explain how you structure a FastAPI application?
+
+[00:01:45]
+CANDIDATE: Sure. I organize my code into routers for different resources. Each router handles a specific domain like users, projects, or tasks. I use Pydantic models for request and response validation. The main app file includes all the routers and configures middleware like CORS.
+
+[00:03:00]
+INTERVIEWER: How do you handle database operations in FastAPI?
+
+[00:03:15]
+CANDIDATE: I use SQLAlchemy as the ORM with PostgreSQL as the database. I create database sessions using dependency injection - FastAPI's Depends function handles creating and closing sessions for each request. I define models using SQLAlchemy's declarative base.
+
+[00:05:00]
+INTERVIEWER: Have you worked with async database operations?
+
+[00:05:15]
+CANDIDATE: I've used asyncpg with SQLAlchemy's async support for some endpoints. I understand the basics of async/await in Python. However, most of my production code uses synchronous SQLAlchemy because our team was more comfortable with it and the performance difference wasn't significant for our use case.
+
+[00:07:00]
+INTERVIEWER: What about authentication and authorization?
+
+[00:07:15]
+CANDIDATE: I implemented JWT-based authentication. Users login with email and password, and they receive a JWT token. I use FastAPI's OAuth2PasswordBearer for token validation. For authorization, I check user roles in the endpoint logic - we have admin, manager, and regular user roles.
+
+[00:09:00]
+INTERVIEWER: How do you handle error responses?
+
+[00:09:15]
+CANDIDATE: I use FastAPI's HTTPException for returning error responses with appropriate status codes. I also created custom exception handlers to format errors consistently across the API. For validation errors, FastAPI automatically returns 422 with detailed error messages from Pydantic.
+
+[00:11:00]
+INTERVIEWER: Have you deployed FastAPI applications?
+
+[00:11:15]
+CANDIDATE: Yes, I've deployed using Docker. I created a Dockerfile that installs dependencies and runs Uvicorn as the ASGI server. We deploy on AWS EC2 instances. I also set up Nginx as a reverse proxy in front of the application.
+
+[00:13:00]
+INTERVIEWER: What testing have you done with FastAPI?
+
+[00:13:15]
+CANDIDATE: I use pytest with FastAPI's TestClient for testing. I write tests for each endpoint, checking both success and error cases. I use fixtures to create test data and override dependencies for database sessions. We maintain about 80% code coverage.
+
+[00:15:00]
+INTERVIEWER: Have you worked with WebSockets in FastAPI?
+
+[00:15:15]
+CANDIDATE: I've read about WebSocket support in FastAPI and understand the basics, but I haven't implemented it in production yet. I know it uses the same route decorators but with WebSocket instead of HTTP methods.
+
+[00:17:00]
+INTERVIEWER: What about background tasks?
+
+[00:17:15]
+CANDIDATE: I've used FastAPI's BackgroundTasks for simple operations like sending welcome emails after user registration. For more complex background processing, we use Celery with Redis as the message broker.
+
+[00:19:00]
+INTERVIEWER: Do you have experience with RAG systems or vector databases?
+
+[00:19:15]
+CANDIDATE: Not directly. I understand the concept of embeddings and vector similarity search from reading about it. I know that RAG combines retrieval with LLM generation, but I haven't implemented such a system. I'm very interested in learning more about this area.
+
+[00:21:00]
+INTERVIEWER: That's good to know. Thank you for your time, Sneha.
+
+[00:21:15]
+CANDIDATE: Thank you for the opportunity.

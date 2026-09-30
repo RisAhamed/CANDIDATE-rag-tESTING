@@ -1,0 +1,35 @@
+Vikram Reddy
+Email: vikram.reddy@email.com
+Phone: +91-9654321098
+Location: Chennai
+
+Summary
+Senior Machine Learning Engineer with 7 years of experience in Python, machine learning, and data science. Expertise in building production ML systems, deep learning models, and data pipelines.
+
+Skills
+Python, Machine Learning, Deep Learning, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, SQL, Spark, Docker, Kubernetes, AWS, MLOps, MLflow, Computer Vision, NLP, XGBoost
+
+Experience
+Senior ML Engineer at DataMind AI (2020-Present)
+- Built and deployed ML models for fraud detection processing 5M+ transactions/day
+- Designed deep learning architectures using TensorFlow for image classification
+- Implemented MLOps pipelines with MLflow, Docker, and Kubernetes
+- Led team of 5 ML engineers, established best practices for model development
+- Reduced model training time by 60% through distributed training optimization
+
+ML Engineer at TechAnalytics (2017-2020)
+- Developed recommendation engines using collaborative filtering and deep learning
+- Built NLP pipelines for text classification and named entity recognition
+- Created data processing pipelines using Spark and Airflow
+- Deployed models to production using Docker and AWS SageMaker
+
+Education
+M.Tech in Machine Learning, IIT Madras (2015-2017)
+- Thesis: "Deep Learning Approaches for Anomaly Detection in Time Series Data"
+
+B.Tech in Electronics and Communication, NIT Trichy (2011-2015)
+
+Certifications
+- TensorFlow Developer Certificate
+- AWS Certified Machine Learning - Specialty
+- Google Cloud Professional Machine Learning Engineer

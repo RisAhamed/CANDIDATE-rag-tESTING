@@ -1,0 +1,35 @@
+Desai
+Email: desai@email.com
+Phone: +91-9321098765
+Location: Pune
+
+Summary
+Data Scientist with 6 years of experience in Python, machine learning, and statistical analysis. Expertise in building predictive models, data pipelines, and business intelligence solutions.
+
+Skills
+Python, Data Science, Machine Learning, Pandas, NumPy, Scikit-learn, TensorFlow, SQL, Tableau, Power BI, Spark, Hadoop, AWS, Git, Statistics, Data Visualization, A/B Testing, Feature Engineering
+
+Experience
+Senior Data Scientist at InsightsAI (2020-Present)
+- Built predictive models for customer churn, achieving 92% accuracy
+- Designed A/B testing frameworks used across 5 product teams
+- Developed ETL pipelines processing 10TB+ data daily using Spark
+- Created executive dashboards in Tableau for C-suite reporting
+- Led data science team of 4, established ML model governance practices
+
+Data Analyst at BusinessMetrics (2018-2020)
+- Performed statistical analysis on sales and marketing data
+- Built regression models for demand forecasting
+- Automated reporting workflows using Python and SQL
+- Collaborated with engineering to productionize ML models
+
+Education
+M.Sc. in Data Science, University of Pune (2016-2018)
+- Thesis: "Ensemble Methods for Imbalanced Classification Problems"
+
+B.Sc. in Statistics, Fergusson College (2013-2016)
+
+Certifications
+- Google Data Analytics Professional Certificate
+- IBM Data Science Professional Certificate
+- Microsoft Certified: Azure Data Scientist Associate

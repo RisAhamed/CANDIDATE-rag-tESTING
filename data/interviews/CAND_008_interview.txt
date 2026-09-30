@@ -1,0 +1,71 @@
+[00:00:00]
+INTERVIEWER: Hi Ananya, thanks for joining. I see you have extensive FastAPI and Docker experience. Can you tell me about your current role?
+
+[00:00:15]
+CANDIDATE: Thank you for having me. I'm a Senior Python Developer at CloudFirst Technologies. I lead the platform team responsible for our microservices infrastructure. We have about 25 microservices running in production, most of them built with FastAPI.
+
+[00:01:30]
+INTERVIEWER: That's quite a few services. How do you manage them all?
+
+[00:01:45]
+CANDIDATE: We use Kubernetes for orchestration with Helm charts for deployment. Each service has its own Git repository with a standardized structure. We use GitHub Actions for CI/CD - every merge to main triggers a build, test, and deploy pipeline. We also use Terraform for managing our cloud infrastructure on AWS.
+
+[00:03:00]
+INTERVIEWER: What made you choose FastAPI over other frameworks?
+
+[00:03:15]
+CANDIDATE: Several reasons. First, the async support is excellent - we handle a lot of I/O-bound operations like database calls and external API requests. Second, the automatic OpenAPI documentation saves us a lot of time. Third, Pydantic integration gives us runtime type validation for free. And fourth, the performance is comparable to Go and Node.js frameworks in our benchmarks.
+
+[00:05:00]
+INTERVIEWER: How do you handle service-to-service communication?
+
+[00:05:15]
+CANDIDATE: We use a combination of REST and gRPC. For external-facing APIs, we use REST with FastAPI. For internal service communication where performance matters, we use gRPC with Protocol Buffers. We also use RabbitMQ for event-driven communication between services that need to react to async events.
+
+[00:07:00]
+INTERVIEWER: Can you describe your Docker workflow?
+
+[00:07:15]
+CANDIDATE: We use multi-stage Docker builds to keep image sizes small. Our typical Python service image is about 150MB. We use Docker Compose for local development with all dependencies like databases and message queues. In production, we use EKS (Elastic Kubernetes Service) with Fargate for some services and EC2 for others.
+
+[00:09:00]
+INTERVIEWER: How do you handle configuration management across services?
+
+[00:09:15]
+CANDIDATE: We use environment variables for configuration, following the 12-factor app methodology. Sensitive values are stored in AWS Secrets Manager and injected at runtime. We use Pydantic Settings for type-safe configuration validation. Each service has a default configuration that can be overridden per environment.
+
+[00:11:00]
+INTERVIEWER: What monitoring and observability practices do you follow?
+
+[00:11:15]
+CANDIDATE: We use the three pillars of observability. For metrics, we use Prometheus and Grafana. For logs, we use the ELK stack (Elasticsearch, Logstash, Kibana). For distributed tracing, we use Jaeger. Every service emits structured JSON logs and custom metrics. We have dashboards for each service and alerts configured for SLO violations.
+
+[00:13:00]
+INTERVIEWER: How do you handle database migrations in a microservices environment?
+
+[00:13:15]
+CANDIDATE: Each service owns its database - we don't share databases between services. We use Alembic for SQLAlchemy migrations. Migrations run as Kubernetes Jobs before the new service version is deployed. We follow expand-contract pattern for backward-compatible changes. For rollbacks, we keep the previous version running until the new version is verified healthy.
+
+[00:15:00]
+INTERVIEWER: What's your approach to API versioning?
+
+[00:15:15]
+CANDIDATE: We use URL-based versioning (v1, v2) for breaking changes. For backward-compatible changes, we don't version - we just add new fields. We maintain deprecation policies where old versions are supported for 6 months with clear sunset headers. We use FastAPI's dependency injection to handle version-specific logic cleanly.
+
+[00:17:00]
+INTERVIEWER: How do you ensure security in your APIs?
+
+[00:17:15]
+CANDIDATE: We use OAuth2 with JWT tokens for authentication. Each service validates tokens using a shared library. We implement rate limiting using Redis-backed token buckets. All inter-service communication uses mutual TLS. We also have a centralized authorization service that handles permissions.
+
+[00:19:00]
+INTERVIEWER: What's the most challenging problem you've solved?
+
+[00:19:15]
+CANDIDATE: The most challenging was migrating our monolith to microservices. We used the strangler fig pattern, gradually extracting services from the monolith. The hardest part was data migration - we had to ensure consistency between the monolith database and new service databases during the transition. We implemented a dual-write pattern with eventual consistency and comprehensive reconciliation jobs.
+
+[00:21:00]
+INTERVIEWER: Impressive. Thank you for the detailed discussion, Ananya.
+
+[00:21:15]
+CANDIDATE: Thank you, it was a pleasure discussing our architecture.

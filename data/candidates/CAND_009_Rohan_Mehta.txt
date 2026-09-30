@@ -1,0 +1,33 @@
+Rohan Mehta
+Email: rohan.mehta@email.com
+Phone: +91-9432109876
+Location: Mumbai
+
+Summary
+Backend Engineer with 4 years of experience building scalable systems using Go and Kubernetes. Focused on infrastructure, distributed systems, and high-performance computing.
+
+Skills
+Go, Golang, Kubernetes, Docker, gRPC, Protocol Buffers, PostgreSQL, Redis, MongoDB, AWS, Terraform, Linux, Microservices, REST API, Git, CI/CD, Prometheus, Grafana
+
+Experience
+Backend Engineer at ScaleUp Systems (2022-Present)
+- Built high-performance microservices in Go handling 500K+ requests/second
+- Designed Kubernetes deployments with Helm charts for 20+ services
+- Implemented gRPC-based inter-service communication with Protocol Buffers
+- Built distributed tracing system using Jaeger and OpenTelemetry
+- Reduced infrastructure costs by 35% through resource optimization
+
+Software Engineer at CloudBase (2021-2022)
+- Developed Go-based API gateway for multi-tenant SaaS platform
+- Implemented service discovery and load balancing with Consul
+- Built custom Kubernetes operators for automated deployments
+- Wrote comprehensive integration tests and load testing scripts
+
+Education
+B.E. in Computer Science, Veermata Jijabai Technological Institute (2017-2021)
+- Graduated with Distinction
+- Final year project: "Distributed Task Scheduler using Go and Kubernetes"
+
+Certifications
+- Certified Kubernetes Application Developer (CKAD)
+- AWS Certified Solutions Architect - Associate

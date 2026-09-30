@@ -1,0 +1,59 @@
+[00:00:00]
+INTERVIEWER: Hi Priya, thanks for coming in. Let's start with your Python experience. What frameworks have you worked with?
+
+[00:00:15]
+CANDIDATE: Thank you. I've primarily worked with Django for the past 3 years at WebTech India. I've also used Flask for smaller projects and microservices. I'm comfortable with the Python ecosystem including decorators, generators, and async/await patterns.
+
+[00:01:30]
+INTERVIEWER: Can you tell me about a challenging project you worked on with Django?
+
+[00:01:45]
+CANDIDATE: Sure. I built a multi-tenant SaaS analytics platform using Django. The main challenge was data isolation between tenants. We used a shared database with tenant_id columns and Django middleware to automatically filter queries. It worked well but required careful testing to ensure no data leaked between tenants.
+
+[00:03:00]
+INTERVIEWER: Have you worked with FastAPI at all?
+
+[00:03:15]
+CANDIDATE: I've read about FastAPI and understand its advantages - automatic OpenAPI docs, Pydantic validation, and async support. I haven't used it in production yet, but I've built a small personal project with it to learn. I'm confident I could transition quickly since the concepts are similar to Flask.
+
+[00:05:00]
+INTERVIEWER: What about asynchronous programming in Python?
+
+[00:05:15]
+CANDIDATE: I've used asyncio and aiohttp for making concurrent API calls. At WebTech, I built a service that aggregated data from multiple third-party APIs, and using async reduced our response time from 3 seconds to under 500ms. I'm familiar with event loops, coroutines, and the differences between asyncio and threading.
+
+[00:07:00]
+INTERVIEWER: How do you handle database optimization in Django?
+
+[00:07:15]
+CANDIDATE: I use select_related and prefetch_related to reduce N+1 query problems. I also use Django's query explain feature to analyze slow queries. For read-heavy endpoints, we implemented Redis caching with cache invalidation signals. We also denormalized some frequently accessed data to avoid complex joins.
+
+[00:09:00]
+INTERVIEWER: Have you worked with any task queue systems?
+
+[00:09:15]
+CANDIDATE: Yes, we used Celery with Redis as the message broker at WebTech. We had tasks for sending emails, generating reports, and processing file uploads. I configured Celery beat for periodic tasks and set up monitoring with Flower. We also implemented task chaining and error handling with retries.
+
+[00:11:00]
+INTERVIEWER: What's your experience with testing?
+
+[00:11:15]
+CANDIDATE: I write unit tests using pytest and Django's test framework. I use fixtures and factories with factory_boy to create test data. We aimed for 80%+ code coverage. I also wrote integration tests that tested the full request-response cycle including database interactions.
+
+[00:13:00]
+INTERVIEWER: How do you stay updated with Python developments?
+
+[00:13:15]
+CANDIDATE: I follow the Python Weekly newsletter, read Real Python articles, and participate in the local Python meetup group. I recently completed a course on advanced Python patterns and I'm currently learning about Python 3.12's new features.
+
+[00:15:00]
+INTERVIEWER: Do you have any experience with Docker or deployment?
+
+[00:15:15]
+CANDIDATE: Yes, I've containerized Django applications using Docker. I wrote Dockerfiles, docker-compose files for local development, and worked with CI/CD pipelines using GitHub Actions. At WebTech, I was responsible for deploying our staging environment.
+
+[00:17:00]
+INTERVIEWER: Great, thank you Priya. Do you have any questions for us?
+
+[00:17:15]
+CANDIDATE: Yes, what does the team's development process look like? And what opportunities are there for learning new technologies like FastAPI?

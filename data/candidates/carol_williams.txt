@@ -1,0 +1,26 @@
+Carol Williams
+Email: carol.williams@email.com
+Phone: +1-555-456-7890
+
+Summary
+Machine Learning engineer with 5 years of experience in Python, deep learning, and NLP. Expertise in building RAG applications, LLM systems, and vector databases. Strong background in data science and MLOps.
+
+Skills
+Python, Machine Learning, Deep Learning, NLP, RAG, LLM, FastAPI, PyTorch, TensorFlow, Hugging Face, LangChain, Qdrant, Docker, Kubernetes, AWS, MLOps, MLflow, Pandas, NumPy, Scikit-learn
+
+Experience
+ML Engineer - AI Innovations (2021 - Present)
+- Built RAG applications using LangChain, Hugging Face, and Qdrant vector database
+- Developed FastAPI services for LLM inference and embedding pipelines
+- Implemented ML pipelines with MLflow and Kubeflow
+- Deployed models on Kubernetes with auto-scaling
+
+Data Scientist - DataDriven Co. (2019 - 2021)
+- Developed machine learning models for customer segmentation
+- Built NLP pipelines for text classification and sentiment analysis
+- Created data pipelines with Spark and Airflow
+- Presented insights to stakeholders using Tableau
+
+Education
+Master of Science in Machine Learning - Carnegie Mellon University (2019)
+Bachelor of Technology in Computer Science - IIT Delhi (2017)

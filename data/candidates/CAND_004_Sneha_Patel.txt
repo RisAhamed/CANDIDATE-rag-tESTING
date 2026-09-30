@@ -1,0 +1,32 @@
+Sneha Patel
+Email: sneha.patel@email.com
+Phone: +91-9876501234
+Location: Pune
+
+Summary
+Python Developer with 3 years of experience building web applications with FastAPI. Focused on API development, database integration, and cloud deployment.
+
+Skills
+Python, FastAPI, Flask, PostgreSQL, MongoDB, Docker, Git, REST API, Linux, HTML, CSS, SQLAlchemy, Pydantic
+
+Experience
+Python Developer at CloudNine Technologies (2022-Present)
+- Developed REST APIs using FastAPI for a project management SaaS platform
+- Integrated PostgreSQL with SQLAlchemy ORM for data persistence
+- Implemented Pydantic models for request/response validation
+- Deployed applications using Docker containers on AWS EC2
+- Wrote unit tests with pytest achieving 80%+ coverage
+
+Software Engineer at DataFlow Systems (2021-2022)
+- Built data processing pipelines using Python and Pandas
+- Developed internal tools using Flask framework
+- Worked with MongoDB for document storage
+- Participated in Agile development with 2-week sprints
+
+Education
+B.E. in Computer Engineering, College of Engineering Pune (2017-2021)
+- Graduated with Distinction
+- Final year project: "Task Management API using FastAPI and PostgreSQL"
+
+Certifications
+- freeCodeCamp - Scientific Computing with Python

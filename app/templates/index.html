@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Search RAG</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#2563eb"/>
+                    <path d="M16 8a4 4 0 110 8 4 4 0 010-8zm0 10c-3.333 0-6.667 1.667-6.667 5v1h13.334v-1c0-3.333-3.334-5-6.667-5z" fill="white"/>
+                </svg>
+                <h1>Candidate Search</h1>
+            </div>
+            <nav class="tab-nav">
+                <button class="tab-btn active" data-tab="search">Search</button>
+                <button class="tab-btn" data-tab="upload">Upload</button>
+                <button class="tab-btn" data-tab="candidates">Candidates</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <!-- Search Tab -->
+        <section id="tab-search" class="tab-panel active">
+            <div class="search-hero">
+                <h2>Find the Right Candidate</h2>
+                <p>Search using natural language to find candidates matching your requirements</p>
+            </div>
+
+            <div class="search-container">
+                <form id="search-form" class="search-form">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="search-input" class="search-input" placeholder='e.g. "Senior Python developer with 5+ years experience in fintech"' required>
+                        <button type="submit" class="search-btn" id="search-btn">
+                            <span class="btn-text">Search</span>
+                            <span class="spinner hidden"></span>
+                        </button>
+                    </div>
+                    <div class="search-options">
+                        <label class="option-label">
+                            Results:
+                            <select id="top-k-select">
+                                <option value="5">5</option>
+                                <option value="10" selected>10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                            </select>
+                        </label>
+                        <label class="option-label checkbox-label">
+                            <input type="checkbox" id="debug-toggle">
+                            Debug Mode
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Debug Panel -->
+            <div id="debug-panel" class="debug-panel hidden">
+                <div class="debug-header">
+                    <h3>Parsed Requirements</h3>
+                    <button class="debug-close" id="debug-close">&times;</button>
+                </div>
+                <div id="debug-content" class="debug-content"></div>
+            </div>
+
+            <!-- Results -->
+            <div id="search-results" class="search-results">
+                <div class="results-placeholder">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="28" cy="28" r="16" stroke="#cbd5e1" stroke-width="3"/>
+                        <path d="M40 40l12 12" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <p>Enter a search query to find candidates</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Tab -->
+        <section id="tab-upload" class="tab-panel">
+            <div class="upload-header">
+                <h2>Upload Documents</h2>
+                <p>Add candidate profiles and interview transcripts to the knowledge base</p>
+            </div>
+
+            <div class="upload-grid">
+                <!-- Profile Upload -->
+                <div class="upload-card">
+                    <div class="upload-card-header">
+                        <div class="upload-icon profile-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3.333 0-6.667 1.667-6.667 5v1h13.334v-1c0-3.333-3.334-5-6.667-5z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Profile Upload</h3>
+                    </div>
+                    <p class="upload-description">Upload a candidate resume or profile document (PDF, DOCX, TXT)</p>
+                    <form id="profile-upload-form" class="upload-form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="profile-candidate-id">Candidate ID *</label>
+                            <input type="text" id="profile-candidate-id" placeholder="e.g. CAND-001" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-file">File *</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="profile-file" accept=".pdf,.docx,.doc,.txt" required>
+                                <div class="file-drop-zone" id="profile-drop-zone">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 22V10m0 0l-5 5m5-5l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6 22v2a4 4 0 004 4h12a4 4 0 004-4v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    <p>Drag & drop file here or click to browse</p>
+                                    <span class="file-name" id="profile-file-name"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="upload-btn" id="profile-upload-btn">
+                            <span class="btn-text">Upload Profile</span>
+                            <span class="spinner hidden"></span>
+                        </button>
+                    </form>
+                    <div id="profile-upload-status" class="upload-status hidden"></div>
+                </div>
+
+                <!-- Interview Upload -->
+                <div class="upload-card">
+                    <div class="upload-card-header">
+                        <div class="upload-icon interview-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 10h8m-8 4h5m7-8v10a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Interview Upload</h3>
+                    </div>
+                    <p class="upload-description">Upload an interview transcript or notes (PDF, DOCX, TXT)</p>
+                    <form id="interview-upload-form" class="upload-form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="interview-candidate-id">Candidate ID *</label>
+                            <input type="text" id="interview-candidate-id" placeholder="e.g. CAND-001" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interview-id">Interview ID</label>
+                            <input type="text" id="interview-id" placeholder="e.g. INT-001">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="interview-date">Date</label>
+                                <input type="date" id="interview-date">
+                            </div>
+                            <div class="form-group">
+                                <label for="interview-stage">Stage</label>
+                                <select id="interview-stage">
+                                    <option value="">Select stage...</option>
+                                    <option value="phone_screen">Phone Screen</option>
+                                    <option value="technical">Technical</option>
+                                    <option value="behavioral">Behavioral</option>
+                                    <option value="onsite">On-site</option>
+                                    <option value="final">Final</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="interviewer">Interviewer</label>
+                            <input type="text" id="interviewer" placeholder="Interviewer name">
+                        </div>
+                        <div class="form-group">
+                            <label for="interview-file">File *</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="interview-file" accept=".pdf,.docx,.doc,.txt" required>
+                                <div class="file-drop-zone" id="interview-drop-zone">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 22V10m0 0l-5 5m5-5l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6 22v2a4 4 0 004 4h12a4 4 0 004-4v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    <p>Drag & drop file here or click to browse</p>
+                                    <span class="file-name" id="interview-file-name"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="upload-btn" id="interview-upload-btn">
+                            <span class="btn-text">Upload Interview</span>
+                            <span class="spinner hidden"></span>
+                        </button>
+                    </form>
+                    <div id="interview-upload-status" class="upload-status hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Candidates Tab -->
+        <section id="tab-candidates" class="tab-panel">
+            <div class="candidates-header">
+                <h2>All Candidates</h2>
+                <button class="refresh-btn" id="refresh-candidates-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 8A6 6 0 112 8a6 6 0 0112 0z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M14 2v4h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Refresh
+                </button>
+            </div>
+            <div id="candidates-list" class="candidates-list">
+                <div class="candidates-loading">
+                    <div class="spinner large"></div>
+                    <p>Loading candidates...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Candidate Detail Modal -->
+    <div id="candidate-modal" class="modal hidden">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Candidate Details</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div id="modal-body" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

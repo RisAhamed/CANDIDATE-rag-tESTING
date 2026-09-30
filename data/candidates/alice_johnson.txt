@@ -1,0 +1,26 @@
+Alice Johnson
+Email: alice.johnson@email.com
+Phone: +1-555-123-4567
+
+Summary
+Experienced Python developer with 6 years of experience building web applications, REST APIs, and microservices. Strong expertise in FastAPI, Flask, and Django. Passionate about clean code, testing, and scalable architecture.
+
+Skills
+Python, FastAPI, Flask, Django, REST API, PostgreSQL, Docker, Kubernetes, AWS, Git, CI/CD, Unit Testing, Microservices, Redis, Celery, SQLAlchemy, Pytest
+
+Experience
+Senior Python Developer - TechCorp Inc. (2021 - Present)
+- Led development of FastAPI-based microservices serving 1M+ requests/day
+- Designed and implemented REST APIs using Flask and FastAPI
+- Managed PostgreSQL databases and Redis caching layers
+- Deployed applications on AWS using Docker and Kubernetes
+
+Python Developer - WebSolutions LLC (2018 - 2021)
+- Built web applications using Django and Flask
+- Developed RESTful APIs for mobile and frontend clients
+- Implemented CI/CD pipelines with GitHub Actions
+- Conducted code reviews and mentored junior developers
+
+Education
+Master of Science in Computer Science - Stanford University (2018)
+Bachelor of Science in Computer Engineering - UC Berkeley (2016)

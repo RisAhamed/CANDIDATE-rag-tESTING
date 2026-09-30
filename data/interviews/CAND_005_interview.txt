@@ -1,0 +1,65 @@
+[00:00:00]
+INTERVIEWER: Welcome Amit, I see you have strong experience with RAG and LangChain. Can you tell me about your current role?
+
+[00:00:15]
+CANDIDATE: Thank you. I'm currently an ML Engineer at AI Innovations Lab. I lead the development of our RAG-based question-answering platform. We serve enterprise clients who need to query their internal knowledge bases using natural language.
+
+[00:01:30]
+INTERVIEWER: What does your RAG architecture look like?
+
+[00:01:45]
+CANDIDATE: Our architecture has several layers. The ingestion layer processes PDFs, Word docs, and web pages using LlamaIndex document loaders. We chunk the content using a recursive character splitter with 500-token chunks and 50-token overlap. The chunks are embedded using a fine-tuned version of BAAI/bge-base-en-v1.5 and stored in a vector database.
+
+[00:03:00]
+INTERVIEWER: Why did you choose LangChain over other frameworks?
+
+[00:03:15]
+CANDIDATE: LangChain provided the most mature ecosystem when we started. The abstractions for chains, agents, and memory were well-designed. We particularly liked the LangChain Expression Language (LCEL) for composing complex pipelines. That said, we've been gradually moving some components to custom implementations where we need more control.
+
+[00:05:00]
+INTERVIEWER: Can you explain how you handle the retrieval quality?
+
+[00:05:15]
+CANDIDATE: Retrieval quality is our biggest focus. We use a hybrid search approach combining vector similarity with BM25 keyword search. The results are merged using Reciprocal Rank Fusion. We then rerank the top 20 results using a cross-encoder model. This two-stage approach gives us much better precision than vector search alone.
+
+[00:07:00]
+INTERVIEWER: How do you evaluate your RAG system?
+
+[00:07:15]
+CANDIDATE: We have a comprehensive evaluation framework. We use RAGAS metrics including faithfulness, answer relevancy, context precision, and context recall. We maintain a golden dataset of 500 question-answer pairs that we run against every deployment. We also do weekly human evaluations where domain experts rate response quality.
+
+[00:09:00]
+INTERVIEWER: What LLMs have you worked with?
+
+[00:09:15]
+CANDIDATE: We've used GPT-4, GPT-3.5, Claude, and open-source models like Llama 2 and Mistral. For most enterprise deployments, we use GPT-4 for the best quality. For cost-sensitive applications, we use fine-tuned Mistral models. We abstract the LLM layer so we can swap models without changing the rest of the pipeline.
+
+[00:11:00]
+INTERVIEWER: How do you handle hallucinations?
+
+[00:11:15]
+CANDIDATE: We use several strategies. First, we use a strict system prompt that instructs the model to only use provided context. Second, we implement a confidence threshold - if the model's response has low token probability, we flag it for review. Third, we use citation generation so users can verify claims against source documents. Finally, we have a feedback mechanism where users can flag incorrect answers.
+
+[00:13:00]
+INTERVIEWER: What's your experience with embeddings beyond the standard models?
+
+[00:13:15]
+CANDIDATE: I've fine-tuned embedding models using contrastive learning on domain-specific data. For a legal tech client, I fine-tuned a model on legal document pairs, which improved retrieval accuracy by 15%. I've also experimented with multi-vector representations using ColBERT-style late interaction models.
+
+[00:15:00]
+INTERVIEWER: How do you scale the system for large document collections?
+
+[00:15:15]
+CANDIDATE: We use sharded vector collections and implement incremental indexing. When new documents are added, we only embed and index the new chunks. We also implement a cache layer for frequent queries. For very large collections, we use a two-stage retrieval: first, we identify relevant document sections using a coarse index, then we do fine-grained chunk retrieval within those sections.
+
+[00:17:00]
+INTERVIEWER: What are the biggest challenges you've faced?
+
+[00:17:15]
+CANDIDATE: The biggest challenge is maintaining quality as the knowledge base grows. More documents mean more potential for irrelevant chunks to be retrieved. We've addressed this with better chunking strategies and metadata filtering. Another challenge is keeping the system updated when source documents change - we implemented a change detection system that triggers re-indexing when documents are modified.
+
+[00:19:00]
+INTERVIEWER: Fascinating work. Thank you for sharing your experience.
+
+[00:19:15]
+CANDIDATE: Thank you, I really enjoyed discussing this.

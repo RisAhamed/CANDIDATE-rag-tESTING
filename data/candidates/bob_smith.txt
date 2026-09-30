@@ -1,0 +1,24 @@
+Bob Smith
+Email: bob.smith@email.com
+Phone: +1-555-987-6543
+
+Summary
+Full-stack JavaScript developer with 4 years of experience in React, Node.js, and cloud technologies. Focused on building responsive web applications and scalable backend services.
+
+Skills
+JavaScript, TypeScript, React, Node.js, Express.js, MongoDB, AWS, Docker, GraphQL, HTML, CSS, Git, Jest, Next.js, Tailwind CSS
+
+Experience
+Full-stack Developer - StartupXYZ (2022 - Present)
+- Built React-based dashboard used by 50K+ users
+- Developed Node.js/Express REST APIs with MongoDB
+- Implemented GraphQL endpoints for complex data queries
+- Deployed on AWS with Docker containers
+
+Frontend Developer - DigitalAgency (2020 - 2022)
+- Created responsive web applications using React and Next.js
+- Collaborated with designers to implement pixel-perfect UI
+- Optimized web performance and accessibility
+
+Education
+Bachelor of Science in Software Engineering - MIT (2020)

@@ -1,0 +1,33 @@
+Arjun Kumar
+Email: arjun.kumar@email.com
+Phone: +91-9876543210
+Location: Bangalore
+
+Summary
+Senior Python Developer with 5 years of experience building scalable web applications, RAG systems, and LLM-powered services. Passionate about clean architecture, vector search, and production-grade AI systems.
+
+Skills
+Python, FastAPI, Django, RAG, LangChain, Docker, PostgreSQL, Redis, AWS, Git, Kubernetes, Embeddings, Vector Databases, REST API, Microservices
+
+Experience
+Senior Python Developer at TechCorp Solutions (2021-Present)
+- Built a complete RAG pipeline using FastAPI, vector databases, and LLM integration
+- Designed microservices architecture serving 1M+ requests/day with 99.9% uptime
+- Implemented embedding-based search using BAAI/bge-small-en-v1.5 (384-dimensional vectors)
+- Led a team of 4 developers, conducted code reviews, and mentored junior engineers
+- Reduced API response time by 40% through Redis caching and query optimization
+
+Python Developer at StartupXYZ (2019-2021)
+- Developed REST APIs with FastAPI and Django for a SaaS analytics platform
+- Implemented caching layer with Redis, reducing database load by 60%
+- Built real-time notification system using WebSockets and Celery
+- Wrote comprehensive unit and integration tests with pytest (90%+ coverage)
+
+Education
+B.Tech in Computer Science, Indian Institute of Technology Delhi (2015-2019)
+- Graduated with First Class Honours
+- Published paper on "Efficient Vector Similarity Search for Large-Scale RAG Systems"
+
+Certifications
+- AWS Certified Solutions Architect - Associate
+- DeepLearning.AI - LangChain for LLM Application Development

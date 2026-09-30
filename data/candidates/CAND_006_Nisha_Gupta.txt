@@ -1,0 +1,33 @@
+Nisha Gupta
+Email: nisha.gupta@email.com
+Phone: +91-9765432109
+Location: Bangalore
+
+Summary
+Full-Stack JavaScript Developer with 4 years of experience building modern web applications using React, Node.js, and cloud technologies. Passionate about user experience and performant frontend applications.
+
+Skills
+JavaScript, TypeScript, React, Node.js, Express.js, Next.js, MongoDB, PostgreSQL, HTML, CSS, Tailwind CSS, Git, Docker, AWS, REST API, GraphQL, Redux, Jest
+
+Experience
+Full-Stack Developer at WebCraft Studios (2022-Present)
+- Built responsive React applications with Next.js for e-commerce platform
+- Developed Node.js/Express REST APIs serving 200K+ daily users
+- Implemented GraphQL API layer for complex data fetching
+- Optimized frontend performance achieving 95+ Lighthouse scores
+- Led migration from JavaScript to TypeScript across 3 projects
+
+Frontend Developer at DigitalSpace (2021-2022)
+- Developed React components for a SaaS dashboard application
+- Implemented state management using Redux Toolkit
+- Wrote unit and integration tests using Jest and React Testing Library
+- Collaborated with designers to implement pixel-perfect UIs
+
+Education
+B.Tech in Computer Science, RV College of Engineering (2017-2021)
+- Graduated with First Class Honours
+- Won 2nd place in college hackathon for building a real-time collaboration tool
+
+Certifications
+- Meta Front-End Developer Professional Certificate
+- AWS Certified Cloud Practitioner

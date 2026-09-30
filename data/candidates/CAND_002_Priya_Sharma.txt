@@ -1,0 +1,32 @@
+Priya Sharma
+Email: priya.sharma@email.com
+Phone: +91-9123456780
+Location: Mumbai
+
+Summary
+Python Developer with 5 years of experience building web applications using Django and Python ecosystem. Strong background in backend development, database design, and API development.
+
+Skills
+Python, Django, Flask, PostgreSQL, MySQL, Redis, Docker, Git, REST API, HTML, CSS, JavaScript, Celery, Linux
+
+Experience
+Python Developer at WebTech India (2020-Present)
+- Built and maintained Django-based web applications serving 500K+ users
+- Designed PostgreSQL database schemas with optimized queries
+- Implemented Celery task queues for background job processing
+- Developed RESTful APIs for mobile and frontend applications
+- Conducted code reviews and followed Agile/Scrum methodologies
+
+Junior Python Developer at CodeCraft (2019-2020)
+- Assisted in developing Flask-based microservices
+- Wrote unit tests using pytest and unittest
+- Participated in daily standups and sprint planning
+- Fixed bugs and implemented small features in existing Django applications
+
+Education
+B.E. in Information Technology, University of Mumbai (2015-2019)
+- Graduated with Distinction
+- Final year project: "Real-time Chat Application using Django Channels"
+
+Certifications
+- Python Institute - PCEP (Certified Entry-Level Python Programmer)

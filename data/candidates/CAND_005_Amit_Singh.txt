@@ -1,0 +1,36 @@
+Amit Singh
+Email: amit.singh@email.com
+Phone: +91-9812345670
+Location: Hyderabad
+
+Summary
+Machine Learning Engineer with 5 years of experience building RAG applications, LLM-powered systems, and LangChain-based solutions. Strong background in NLP, embeddings, and production AI systems.
+
+Skills
+Python, RAG, LangChain, LlamaIndex, Machine Learning, Deep Learning, NLP, Embeddings, Vector Databases, Docker, FastAPI, PostgreSQL, Redis, AWS, Git, TensorFlow, PyTorch, Hugging Face
+
+Experience
+ML Engineer at AI Innovations Lab (2021-Present)
+- Designed and implemented RAG pipelines using LangChain and LlamaIndex
+- Built LLM-powered question-answering systems for enterprise knowledge bases
+- Fine-tuned embedding models for domain-specific semantic search
+- Deployed AI services using FastAPI and Docker on AWS
+- Reduced retrieval latency by 50% through vector index optimization
+
+Data Scientist at AnalyticsPro (2019-2021)
+- Built NLP models for text classification and sentiment analysis
+- Developed recommendation systems using collaborative filtering
+- Processed and analyzed large datasets using Pandas and Spark
+- Created data visualizations and reports for stakeholders
+
+Education
+M.Tech in Artificial Intelligence, IIIT Hyderabad (2017-2019)
+- Thesis: "Efficient Retrieval-Augmented Generation for Domain-Specific QA"
+- Published 2 papers in NLP conferences
+
+B.Tech in Computer Science, NIT Warangal (2013-2017)
+
+Certifications
+- DeepLearning.AI - Building Systems with the ChatGPT API
+- Hugging Face - NLP Course
+- AWS Certified Machine Learning - Specialty

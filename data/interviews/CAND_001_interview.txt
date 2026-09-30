@@ -1,0 +1,65 @@
+[00:00:00]
+INTERVIEWER: Welcome Arjun, thanks for joining us today. Let's dive right in. Can you tell me about your experience with FastAPI?
+
+[00:00:15]
+CANDIDATE: Thank you for having me. I've been using FastAPI for about 3 years now. At TechCorp, I built a complete RAG pipeline using FastAPI as the API layer. We were serving over 1 million requests per day with sub-100ms latency.
+
+[00:01:30]
+INTERVIEWER: That's impressive. Can you walk me through how you designed the RAG system?
+
+[00:01:45]
+CANDIDATE: Sure. The system has three main components. First, we have a document ingestion pipeline that chunks documents and generates embeddings. Second, we store those embeddings in a vector database. Third, when a query comes in, we retrieve the relevant chunks and pass them to an LLM for generation.
+
+[00:03:00]
+INTERVIEWER: What embedding model did you use and why?
+
+[00:03:15]
+CANDIDATE: We used BAAI/bge-small-en-v1.5. It produces 384-dimensional embeddings and offers a great balance between speed and accuracy. For our use case, the smaller dimension meant faster similarity searches without significant quality loss. We benchmarked it against larger models and the difference in retrieval quality was minimal for our domain.
+
+[00:05:30]
+INTERVIEWER: How did you handle scaling the FastAPI services?
+
+[00:05:45]
+CANDIDATE: We deployed on Kubernetes with horizontal pod autoscaling. The FastAPI services were completely stateless, so scaling was straightforward. We used Redis for caching frequent queries, which reduced our vector database load by about 40%. We also implemented request batching for the embedding generation.
+
+[00:07:00]
+INTERVIEWER: What challenges did you face with the vector database?
+
+[00:07:15]
+CANDIDATE: The main challenge was managing the index as our document collection grew. We started with a flat index but had to move to HNSW for better performance at scale. We also had to carefully tune the ef_search parameter to balance between recall and latency. Eventually, we settled on ef_search=100 which gave us 95%+ recall with acceptable latency.
+
+[00:09:00]
+INTERVIEWER: Did you implement any monitoring for the RAG pipeline?
+
+[00:09:15]
+CANDIDATE: Yes, we set up comprehensive monitoring using Prometheus and Grafana. We tracked embedding generation latency, vector search time, LLM response time, and end-to-end latency. We also monitored the quality of responses by having human evaluators rate a sample of outputs weekly.
+
+[00:11:00]
+INTERVIEWER: How did you ensure the quality of retrieved chunks?
+
+[00:11:15]
+CANDIDATE: We implemented a two-stage retrieval process. First, we did a broad vector search to get the top 50 chunks. Then, we used a cross-encoder to rerank those chunks and select the top 5. This improved our precision significantly. We also implemented a relevance threshold - if the top chunk scored below 0.7, we would tell the user we couldn't find a relevant answer.
+
+[00:13:00]
+INTERVIEWER: What was your experience with LangChain in this project?
+
+[00:13:15]
+CANDIDATE: We used LangChain primarily for the orchestration layer. It helped us chain together the retrieval, prompt construction, and LLM call. We also used its document loaders for ingesting various file formats. However, for the core retrieval logic, we wrote custom code because we needed more control over the embedding and search parameters.
+
+[00:15:00]
+INTERVIEWER: If you were to rebuild this system today, what would you do differently?
+
+[00:15:15]
+CANDIDATE: I would invest more time in the evaluation framework from the start. We built it as an afterthought and it was painful to retrofit. I would also consider using a more modern vector database with built-in filtering capabilities. And I would implement a feedback loop where user interactions automatically improve the retrieval over time.
+
+[00:17:00]
+INTERVIEWER: Great insights. Let's move on to some system design questions. How would you design a rate limiter for a public API?
+
+[00:17:15]
+CANDIDATE: I would use a token bucket algorithm with Redis as the backing store. Each user gets a bucket that refills at a fixed rate. The bucket size determines the burst capacity. This is more flexible than a fixed window approach because it allows bursts while maintaining the average rate. For distributed systems, we would use Redis Lua scripts to ensure atomicity.
+
+[00:19:00]
+INTERVIEWER: Makes sense. Thank you for your time Arjun, this was a great discussion.
+
+[00:19:15]
+CANDIDATE: Thank you, I enjoyed the conversation.

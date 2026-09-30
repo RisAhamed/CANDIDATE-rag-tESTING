@@ -1,0 +1,33 @@
+Rahul Verma
+Email: rahul.verma@email.com
+Phone: +91-9988776655
+Location: Delhi
+
+Summary
+Java Developer with 6 years of experience building enterprise applications using Spring ecosystem. Expertise in microservices, cloud deployment, and high-performance systems.
+
+Skills
+Java, Spring Boot, Spring Framework, Hibernate, MySQL, PostgreSQL, Docker, Kubernetes, AWS, Maven, Git, Microservices, REST API, Kafka, Redis
+
+Experience
+Senior Java Developer at EnterpriseSoft (2020-Present)
+- Developed Spring Boot microservices for a banking transaction platform
+- Implemented event-driven architecture using Apache Kafka
+- Designed REST APIs handling 10M+ daily transactions
+- Optimized JVM performance and reduced GC pauses by 30%
+- Mentored 3 junior developers and conducted technical interviews
+
+Java Developer at TechSolutions (2018-2020)
+- Built Spring MVC web applications for healthcare management system
+- Integrated Hibernate ORM with PostgreSQL for data persistence
+- Implemented OAuth2 authentication and authorization
+- Wrote comprehensive JUnit tests with 85%+ code coverage
+
+Education
+B.Tech in Computer Science, Delhi Technological University (2014-2018)
+- Graduated with First Class
+- Active member of Google Developer Student Club
+
+Certifications
+- Oracle Certified Professional: Java SE 11 Developer
+- AWS Certified Developer - Associate

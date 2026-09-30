@@ -1,0 +1,35 @@
+Ananya Iyer
+Email: ananya.iyer@email.com
+Phone: +91-9543210987
+Location: Bangalore
+
+Summary
+Senior Python Developer with 5 years of experience building FastAPI microservices, Docker-based deployments, and cloud-native applications. Strong focus on system design, API architecture, and DevOps practices.
+
+Skills
+Python, FastAPI, Docker, Kubernetes, PostgreSQL, Redis, MongoDB, AWS, GCP, Git, CI/CD, GitHub Actions, Terraform, Microservices, REST API, gRPC, Celery, Linux, Nginx
+
+Experience
+Senior Python Developer at CloudFirst Technologies (2021-Present)
+- Architected FastAPI microservices platform serving 2M+ requests/day
+- Designed Docker-based deployment pipelines with Kubernetes orchestration
+- Implemented service mesh using Istio for traffic management and observability
+- Built CI/CD pipelines with GitHub Actions, reducing deployment time by 70%
+- Led migration from monolith to microservices, improving system scalability
+
+Python Developer at InnovateTech (2019-2021)
+- Developed REST APIs using FastAPI for a fintech payment platform
+- Implemented async task processing with Celery and Redis
+- Deployed applications on AWS using ECS and EKS
+- Wrote comprehensive tests with pytest and achieved 90%+ coverage
+- Monitored services using Prometheus and Grafana
+
+Education
+B.Tech in Computer Science, BITS Pilani (2015-2019)
+- Graduated with First Class Honours
+- Teaching assistant for Data Structures and Algorithms course
+
+Certifications
+- AWS Certified Solutions Architect - Professional
+- Certified Kubernetes Administrator (CKA)
+- Docker Certified Associate
